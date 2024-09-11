@@ -1,0 +1,30 @@
+@use '../var';
+
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+    
+
+    &--primary {
+        color: var.$textColor;
+        background-color: var.$purple;
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+        width: 100%;
+        
+        &--primary {
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 641px) and (max-width: 1024px) {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+}
